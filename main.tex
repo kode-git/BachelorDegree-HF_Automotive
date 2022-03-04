@@ -1,0 +1,140 @@
+\documentclass[12pt,italian,a4paper,oneside,openright]{book}
+\usepackage{url,amsfonts,epsfig}
+%\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace} %package per spazi
+\usepackage{listings} %per il codice
+\lstloadlanguages{Python}%per il codice matlab
+\usepackage{fancyvrb}
+\usepackage{algorithm2e}
+\usepackage[format=hang,font=footnotesize]{caption}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+%\usepackage{algorithm,algorithmic}
+\graphicspath{{img/}}s
+\usepackage[hyperindex]{hyperref} %per l'indice interattivo
+\hypersetup{colorlinks=true, linkcolor=black} %per colorare i link
+%\DeclareGraphicsRule{.jpg}{jpg}{}{} % da commentare per il PDF
+%\DeclareGraphicsRule{.bmp} {bmp}{}{} % da commentare per il PDF
+\setmarginsrb{35mm}{30mm}{30mm}{30mm}{0mm}{10mm}{0mm}{10mm}
+%%\setmarginsrb{1.5cm}{1.5cm}{1,2cm}{1,5cm}{0cm}{2cm}{2cm}{2cm}
+
+% commands for pagination %
+\newcommand{\voidpage}{\newpage\null\thispagestyle{empty}}
+
+% command for index %
+\renewcommand{\chaptername}{Capitolo}
+\renewcommand{\listfigurename}{Lista delle Figure}
+\renewcommand{\contentsname}{Sommario}
+\renewcommand\bibname{Bibliografia}
+\title{}
+\author{}
+\date{}
+
+\begin{document}
+\pagenumbering{Roman}
+
+%%%% Opzione per interlinea 2
+\baselineskip 1.5em
+
+%% INIZIO FRONTESPIZIO
+{ \thispagestyle{empty}
+
+
+\vskip 1cm \large \centerline{\textsc{Università degli Studi di
+Salerno}}
+
+\centerline {\textsc{Dipartimento di Informatica}}
+
+\centerline {\small\textsc{Corso di laurea in Informatica}}
+
+\begin{center}
+\vspace{0.5cm}
+\includegraphics[scale=0.47]{img/logo.png}
+\end{center}
+
+
+\vskip 0.5cm
+
+\large \centerline {\textsc{Tesi di laurea triennale}}
+
+\vskip 0.5cm
+
+\Large \centerline {Analisi ed implementazione di meccanismi di gestione }
+\Large \centerline {e privatizzazione dei dati in una}
+\Large \centerline {architettura basata su Hyperledger Fabric}
+
+
+\vskip 4.5cm
+
+
+\large
+
+\begin{minipage}[t]{7cm}
+
+\textsc{Relatore}
+\newline
+Prof. Francesco Palmieri\\
+\textsc{Co-Relatore}
+\newline
+Dott. Gianluca Fimiani
+\newline
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{5cm}
+\hfill 
+\textsc{Candidato}
+
+\hfill Mario Sessa
+
+\hfill
+0512104650
+\end{minipage}
+\vskip 1.2 cm \Large \centerline {Anno Accademico 2019-2020}
+\vfill \eject}
+% fine del frontespizio
+
+%%% inizio della dedica
+\thispagestyle{plain} \vspace*{\fill}
+\begin{flushright}
+\textit{``A tutti coloro che mi
+        sopportano''}\\
+\emph{} \vfill
+\end{flushright}
+%%% fine della dedica
+\newpage
+%\thispagestyle{plain}
+\markboth{Indice}{Indice}
+\tableofcontents
+
+\listoffigures
+%%\listoftables
+
+\pagenumbering{arabic}
+
+\markboth{}{}
+\voidpage
+\input{first.tex}
+\voidpage
+\input{second.tex}
+\voidpage
+\input{third.tex}
+\voidpage
+\input{fourth.tex}
+\voidpage
+\input{fifth.tex}
+\voidpage
+\input{sixth.tex}
+\voidpage
+\pagestyle{plain}
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\input{bib.tex}
+\end{document}
+
+
